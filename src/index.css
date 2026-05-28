@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Outfit", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  
+  /* Redefine Slate to be a warm 'Paper/Organic Stone' palette */
+  --color-slate-50: #FFFDF8;
+  --color-slate-100: #F6F4EB;
+  --color-slate-200: #EBE6D8;
+  --color-slate-300: #DCD4C0;
+  --color-slate-400: #AEA48F;
+  --color-slate-500: #887F6B;
+  --color-slate-600: #615949;
+  --color-slate-700: #433E33;
+  --color-slate-800: #24221C;
+  --color-slate-900: #181612;
+  --color-slate-950: #0C0B09;
+  
+  /* Redefine Emerald to a deep rich market organic green */
+  --color-emerald-50: #F3FAF5;
+  --color-emerald-100: #E1F3E7;
+  --color-emerald-200: #C2E8CE;
+  --color-emerald-300: #93D5A8;
+  --color-emerald-400: #5DBA7C;
+  --color-emerald-500: #369E58;
+  --color-emerald-600: #247D42;
+  --color-emerald-700: #1E6336;
+  --color-emerald-800: #1A4F2D;
+  --color-emerald-900: #154126;
+
+  /* Marigold / Turmeric Orange instead of Amber */
+  --color-amber-50: #FFFBF0;
+  --color-amber-100: #FEF3D1;
+  --color-amber-200: #FDE29D;
+  --color-amber-300: #FBC55A;
+  --color-amber-400: #F89E23;
+  --color-amber-500: #F07E05; /* Deep Marigold */
+  --color-amber-600: #D55E01;
+  --color-amber-700: #B14304;
+  --color-amber-800: #8E350B;
+  --color-amber-900: #722D0D;
+
+  /* Enhanced crisp shadows for a neo-premium feel */
+  --shadow-sm: 0 2px 4px rgba(24, 22, 18, 0.04);
+  --shadow-md: 0 4px 6px -1px rgba(24, 22, 18, 0.08), 0 2px 4px -1px rgba(24, 22, 18, 0.04);
+  --shadow-lg: 0 10px 15px -3px rgba(24, 22, 18, 0.08), 0 4px 6px -2px rgba(24, 22, 18, 0.04);
+  --shadow-xl: 0 20px 25px -5px rgba(24, 22, 18, 0.08), 0 10px 10px -5px rgba(24, 22, 18, 0.04);
+  --shadow-2xl: 0 25px 50px -12px rgba(24, 22, 18, 0.15);
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: #F6F4EB;
+  color: #181612; /* Custom slate 900 */
+}
+
+/* Custom Visual Waveform Animation */
+@keyframes voice-wave {
+  0%, 100% {
+    height: 6px;
+  }
+  50% {
+    height: 32px;
+  }
+}
+
+.wave-bar-1 { animation: voice-wave 1.1s ease-in-out infinite alternate; }
+.wave-bar-2 { animation: voice-wave 0.8s ease-in-out infinite alternate 0.15s; }
+.wave-bar-3 { animation: voice-wave 1.4s ease-in-out infinite alternate 0.3s; }
+.wave-bar-4 { animation: voice-wave 0.9s ease-in-out infinite alternate 0.1s; }
+.wave-bar-5 { animation: voice-wave 1.2s ease-in-out infinite alternate 0.4s; }
+
+/* Custom Haptic Simulation Frame Shake */
+@keyframes frame-shake {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  10%, 30%, 50%, 70%, 90% { transform: translate(-3px, 1px) scale(0.99); }
+  20%, 40%, 60%, 80% { transform: translate(3px, -1px) scale(1.01); }
+}
+
+.animate-vibration-shake {
+  animation: frame-shake 0.4s cubic-bezier(.36,.07,.19,.97) both;
+}

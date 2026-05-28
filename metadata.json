@@ -1,0 +1,8 @@
+{
+  "name": "InsightCart",
+  "description": "A high-performance offline-first app for Indian hyper-local commerce containing Budget Guardian, RBAC ledgers, Voice Echo-back, and dynamic QRs.",
+  "requestFramePermissions": [
+    "microphone"
+  ],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
